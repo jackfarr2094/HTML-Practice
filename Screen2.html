@@ -1,0 +1,25 @@
+<html>
+
+<body Onmousemove = "dosomething()">
+<span Id = "NBS" style = "Position;absolute;top;0;left;0;">
+Nationwide
+</span>
+<input type = "text" Id = "Screen" onmousenter = "TakeTheText()";>
+</body>
+
+
+<script>
+function dosomething(){
+var X = window.event.clientX;
+var Y = window.event.clientY;
+var ref1 =  window.document.getElementById("NBS");
+ref1.style.top = Y;
+ref1.style.left = X;
+}
+function TakeTheText() {
+var data = window.document.getElementById("Screen").values;
+window.document.getElementById("NBS").innerHTML=data;
+}
+</script>
+
+</html>

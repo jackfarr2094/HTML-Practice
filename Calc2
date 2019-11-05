@@ -1,0 +1,27 @@
+<html>
+<script>
+	Var Ref1, Ref2, Ref3;
+	Var No1, No2;
+	function Addition() {
+	var Ref1 = window.document.getElementById("T1");
+	var Ref2 = window.document.getElementById("T2");
+	var Ref3 = window.document.getElementById("T3");
+	var No1 = parseInt(Ref1.value);
+	var No2 = parseInt(Ref2.value);
+	Var Result = No1 + No2;
+	Ref3.value = Result;
+	}
+	function Addition() {
+	getValues();
+	Ref3.Value = No1 + No2;
+	}
+	</script>
+	First No: <input type = "Text" Id "T1"> <br>
+	Second No: <input type = "Text" Id "T2"> <br>
+	<Input Type = "button" Id = "B1" value = "+" onclick = "Addition">
+	<Input Type = "button" Id = "B2" value = "-" onclick = "Subtraction">
+	<Input Type = "button" Id = "B3" value = "x" onclick = "Multiplication">
+	<Input Type = "button" Id = "B4" value = "/" onclick = "Division">
+	Result: <input Type = "Text" id = "T3">
+	</html>
+ 	

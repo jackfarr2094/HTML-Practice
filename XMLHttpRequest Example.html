@@ -1,0 +1,48 @@
+<html>
+<head>
+</head>
+<script>
+    function getty() {
+let request = new XMLHttpRequest();
+request.open ("GET", "https://gist.githubusercontent.com/mariodev12/a923f2b651a005ca3ca7f851141efcbc/raw/39b06a32e4a58fc1fe63c7478a97edccd21138f1/superheroes.json");
+request.onload = function() {
+    renderData(JSON.parse(request.response));
+	}
+request.send();
+    }
+getty();
+function renderData(jsData){
+let list = document.getElementById("Superheroes List");
+list.innerHTML = "";
+for(let superhero of jsData) {
+    let listitem = document.createElement("li");
+    listitem.innerText = superhero
+    list.appendChild(listitem);
+    }
+}
+function postData(form) {
+  let body = {};
+    for(let inputty of form) {
+        if(inputty.name) {
+            body[inputty.name] = inputty.value
+        }
+    }
+    let body = (JSON.Stringify(body));
+    let request = new XMLHttpRequest();
+    request.open("POST", "https://gist.githubusercontent.com/mariodev12/a923f2b651a005ca3ca7f851141efcbc/raw/39b06a32e4a58fc1fe63c7478a97edccd21138f1/superheroes.json");
+    request.onload = function() {
+        getty();
+    request.send(body);
+}
+</script>
+<body>
+<form onsubmit = "return postData(this)">
+    <input name = "superhero" type = "text" placeholder = "enter superhero name">
+    <input name = "publisher" type = "text" placeholder = "enter publisher name">
+    <input name = "alter-ego" type = "text" placeholder = "enter alter-ego name">
+    <input name = "first-appearance" type = "text" placeholder = "enter first-appearnce name">
+    <input name = "character" type = "text" placeholder = "enter character name">
+    <input type="submit">
+</body>
+</form>
+</html>

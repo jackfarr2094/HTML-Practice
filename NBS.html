@@ -1,0 +1,27 @@
+<html>
+<body Onmousemove = "dosomething()">
+<span style = "Position;absolute;top;0;left;0;" id = "NBS">
+<input type = "Button" value = "Red" onmouseenter = "ColourRed()" span style="background: red">
+<input type = "Button" value = "Green" onmouseenter = "ColourGreen()" span style="background: green">
+<input type = "Button" value = "Blue" onmouseenter = "ColourBlue()" span style="background: blue">
+Nationwide
+</span>
+<script>
+function dosomething(){
+var X = window.event.clientX;
+var Y = window.event.clientY;
+var ref1 =  window.document.getElementById("NBS");
+ref1.style.top = Y;
+ref1.style.left = X;
+}
+</script>
+<html>
+<script>
+function ColourRed() {
+var X = window.event.client X;
+var Y = window.event.client Y;
+var ref1 = window.document.getElementById("NBS");
+ref1.style.background-color = red;
+}
+</script>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<form action = "Process.html" method = "post" onsubmit = "return CheckValues()">
+RegNo: <input type = "Text" id = "RegNo" Name = "RegNo1" min = "100" max = "200">
+<br>
+<br>
+Name: <input type = "Text" id = "N" Name = "Sname">
+<br>
+<br>
+PostCode: <input type = "Text" id = "P" Name = "PostCode">
+<br>
+<br>
+<input type = "submit">
+
+<span RegNo: invisible innerHTML(= "*Numbers only and RegNo Must be int between 100-200">
+    </span>
+       <span Name: invisible innerHTML(= "*Aplha characters only">
+            </span>
+        </span>
+        <span Name: invisible innerHTML(= "*Max 10 characters">
+
+</form>
+<SCRIPT>
+function CheckValues() {
+    var Ref1 = document.getElementById("RegNo");
+    var Ref2 = document.getElementById("N");
+    var Ref3 = document.getElementById("P");
+    if(Ref1.value=="") {
+        alert("Registration number is missing my friend");
+        return false;
+    }
+        else if(Ref2.value==""){
+            alert("Name is missing my friend");
+            return false;
+        
+    }
+    else if (Ref3.value=="") {
+        alert("PostCode is missing my friend");
+        return false;
+    }
+    }
+</SCRIPT>
+</html>

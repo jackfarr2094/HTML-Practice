@@ -1,0 +1,35 @@
+<html>
+<body onkeydown="KeyPressed()">
+<span id="G" style ="position:absolute;top:500;left:30">
+<pre>
+    _--_
+</pre>
+    </span>
+</body>
+
+<script>
+var LEFT = 0;
+function KeyPressed() {
+    var Ref = document.getElementById("G");
+    LEFT = parseInt(Ref.style.left);
+    if(event.keycode==39){
+        LEFT += 10;
+    } 
+    if (event.keycode==37) {
+        LEFT -= 10;
+    }
+    if (LEFT <=10) LEFT=10;
+    if (LEFT >=1500) LEFT=1500;
+    Ref.style.left = LEFT;
+
+    if(event.keycode == 32) {
+         var span = document.createElement("span");
+         span.innerHTML = "*";
+         span.style.position="absolute";
+         span.style.top=1500;
+         span.style.left =LEFT;
+         document.body.appendChild(span);
+    }
+}
+</script>
+</html>

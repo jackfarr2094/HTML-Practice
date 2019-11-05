@@ -1,0 +1,49 @@
+<html>
+<script>
+function menuitem(ref, colour) {
+    ref.style.backgroundcolor= colour;
+}
+function clickmenu(mv, mh) {
+        var ref1 = document.getElementById(mv);
+        var ref2 = document.getElementById(mh);
+        ref1.style.visibility = "visible";
+        ref2.style.visibility = "hidden";
+        }
+        </script>
+    <style border-style:solid></style>
+    
+<span id = "cities" style = "Position:absolute;top:100;left:100;" onclick ="clickmenu('menu1', 'menu2')">
+        Cities
+        </span>
+ <span id = "sports" style = "Position:absolute;top:100;left:700" onclick ="clickmenu('menu2', 'menu1')">>
+        Sports
+        </span>
+ 
+<span id = "menu1" style = "Position:absolute;top:200;left:200">
+<span id = "m1" style = "Position:absolute;top:200;left:200" onmouseenter = "menuitem(this, 'blue')"
+    span id = "m1" style = "Position:absolute;top:200;left:200" onmouseleave = "menuitem(this, 'white')">
+            London
+    </span>
+                <span id = "m2" style = "Position:absolute;top:215;left:200" onmouseenter = "menuitem(this, 'blue')"
+                span id = "m2" style = "Position:absolute;top:215;left:200" onmouseleave = "menuitem(this, 'white')">
+                Manchester
+                </span>
+                        <span id = "m3" style = "Position:absolute;top:230;left:200" onmouseenter = "menuitem(this, 'blue')"
+                        span id = "m3" style = "Position:absolute;top:230;left:200" onmouseleave = "menuitem(this, 'white')">
+                        Swindon
+                        </span>
+
+                        <span id = "m1" style = "Position:absolute;top:200;left:700" onmouseenter = "menuitem(this, 'blue')"
+                            span id = "m1" style = "Position:absolute;top:200;left:700" onmouseenter = "menuitem (this, 'white')">
+                            Cricket
+                            </span>
+                            <span id = "m2" style = "Position:absolute;top:215;left:700" onmouseenter = "menuitem(this, 'blue')"
+                            span id = "m2" style = "Position:absolute;top:215;left:700" onmouseenter = "menuitem(this, 'white')">
+                            Football
+                            </span>
+                            <span id = "m3" style = "Position:absolute;top:230;left:700" onmouseenter = "menuitem(this, 'blue')"
+                            span id = "m3" style = "Position:absolute;top:230;left:700" onmouseenter = "menuitem(this, 'white')">
+                            Rugby
+                            </span>
+                            </span>
+</html>

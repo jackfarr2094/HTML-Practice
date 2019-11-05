@@ -1,0 +1,6 @@
+<html>
+<b> The Rock Playlist Database <center> </b>
+<br>
+<br>
+<br>
+<input type = "Text" id "SearchBar">
